@@ -1,0 +1,1211 @@
+// This file is auto-generated, DO NOT EDIT.
+//
+// Source:
+//
+//	Title: NetBox REST API
+//	Version: 3.5.1 (3.5)
+package models
+
+import (
+	validation "github.com/go-ozzo/ozzo-validation/v4"
+	"github.com/go-ozzo/ozzo-validation/v4/is"
+)
+
+// WirelessWirelessLansListQueryParameters is an object.
+type WirelessWirelessLansListQueryParameters struct {
+	// AuthCipher: * `auto` - Auto
+	// * `tkip` - TKIP
+	// * `aes` - AES
+	AuthCipher []string `json:"auth_cipher,omitempty" mapstructure:"auth_cipher,omitempty"`
+	// AuthCipherN: * `auto` - Auto
+	// * `tkip` - TKIP
+	// * `aes` - AES
+	AuthCipherN []string `json:"auth_cipher__n,omitempty" mapstructure:"auth_cipher__n,omitempty"`
+	// AuthPsk:
+	AuthPsk []string `json:"auth_psk,omitempty" mapstructure:"auth_psk,omitempty"`
+	// AuthPskEmpty:
+	AuthPskEmpty []string `json:"auth_psk__empty,omitempty" mapstructure:"auth_psk__empty,omitempty"`
+	// AuthPskIc:
+	AuthPskIc []string `json:"auth_psk__ic,omitempty" mapstructure:"auth_psk__ic,omitempty"`
+	// AuthPskIe:
+	AuthPskIe []string `json:"auth_psk__ie,omitempty" mapstructure:"auth_psk__ie,omitempty"`
+	// AuthPskIew:
+	AuthPskIew []string `json:"auth_psk__iew,omitempty" mapstructure:"auth_psk__iew,omitempty"`
+	// AuthPskIsw:
+	AuthPskIsw []string `json:"auth_psk__isw,omitempty" mapstructure:"auth_psk__isw,omitempty"`
+	// AuthPskN:
+	AuthPskN []string `json:"auth_psk__n,omitempty" mapstructure:"auth_psk__n,omitempty"`
+	// AuthPskNic:
+	AuthPskNic []string `json:"auth_psk__nic,omitempty" mapstructure:"auth_psk__nic,omitempty"`
+	// AuthPskNie:
+	AuthPskNie []string `json:"auth_psk__nie,omitempty" mapstructure:"auth_psk__nie,omitempty"`
+	// AuthPskNiew:
+	AuthPskNiew []string `json:"auth_psk__niew,omitempty" mapstructure:"auth_psk__niew,omitempty"`
+	// AuthPskNisw:
+	AuthPskNisw []string `json:"auth_psk__nisw,omitempty" mapstructure:"auth_psk__nisw,omitempty"`
+	// AuthType: * `open` - Open
+	// * `wep` - WEP
+	// * `wpa-personal` - WPA Personal (PSK)
+	// * `wpa-enterprise` - WPA Enterprise
+	AuthType []string `json:"auth_type,omitempty" mapstructure:"auth_type,omitempty"`
+	// AuthTypeN: * `open` - Open
+	// * `wep` - WEP
+	// * `wpa-personal` - WPA Personal (PSK)
+	// * `wpa-enterprise` - WPA Enterprise
+	AuthTypeN []string `json:"auth_type__n,omitempty" mapstructure:"auth_type__n,omitempty"`
+	// Created:
+	Created []time.Time `json:"created,omitempty" mapstructure:"created,omitempty"`
+	// CreatedGt:
+	CreatedGt []time.Time `json:"created__gt,omitempty" mapstructure:"created__gt,omitempty"`
+	// CreatedGte:
+	CreatedGte []time.Time `json:"created__gte,omitempty" mapstructure:"created__gte,omitempty"`
+	// CreatedLt:
+	CreatedLt []time.Time `json:"created__lt,omitempty" mapstructure:"created__lt,omitempty"`
+	// CreatedLte:
+	CreatedLte []time.Time `json:"created__lte,omitempty" mapstructure:"created__lte,omitempty"`
+	// CreatedN:
+	CreatedN []time.Time `json:"created__n,omitempty" mapstructure:"created__n,omitempty"`
+	// CreatedByRequest:
+	CreatedByRequest string `json:"created_by_request,omitempty" mapstructure:"created_by_request,omitempty"`
+	// Description:
+	Description []string `json:"description,omitempty" mapstructure:"description,omitempty"`
+	// DescriptionEmpty:
+	DescriptionEmpty []string `json:"description__empty,omitempty" mapstructure:"description__empty,omitempty"`
+	// DescriptionIc:
+	DescriptionIc []string `json:"description__ic,omitempty" mapstructure:"description__ic,omitempty"`
+	// DescriptionIe:
+	DescriptionIe []string `json:"description__ie,omitempty" mapstructure:"description__ie,omitempty"`
+	// DescriptionIew:
+	DescriptionIew []string `json:"description__iew,omitempty" mapstructure:"description__iew,omitempty"`
+	// DescriptionIsw:
+	DescriptionIsw []string `json:"description__isw,omitempty" mapstructure:"description__isw,omitempty"`
+	// DescriptionN:
+	DescriptionN []string `json:"description__n,omitempty" mapstructure:"description__n,omitempty"`
+	// DescriptionNic:
+	DescriptionNic []string `json:"description__nic,omitempty" mapstructure:"description__nic,omitempty"`
+	// DescriptionNie:
+	DescriptionNie []string `json:"description__nie,omitempty" mapstructure:"description__nie,omitempty"`
+	// DescriptionNiew:
+	DescriptionNiew []string `json:"description__niew,omitempty" mapstructure:"description__niew,omitempty"`
+	// DescriptionNisw:
+	DescriptionNisw []string `json:"description__nisw,omitempty" mapstructure:"description__nisw,omitempty"`
+	// Group:
+	Group []int32 `json:"group,omitempty" mapstructure:"group,omitempty"`
+	// GroupN:
+	GroupN []int32 `json:"group__n,omitempty" mapstructure:"group__n,omitempty"`
+	// GroupId:
+	GroupId []int32 `json:"group_id,omitempty" mapstructure:"group_id,omitempty"`
+	// GroupIdN:
+	GroupIdN []int32 `json:"group_id__n,omitempty" mapstructure:"group_id__n,omitempty"`
+	// Id:
+	Id []int32 `json:"id,omitempty" mapstructure:"id,omitempty"`
+	// IdGt:
+	IdGt []int32 `json:"id__gt,omitempty" mapstructure:"id__gt,omitempty"`
+	// IdGte:
+	IdGte []int32 `json:"id__gte,omitempty" mapstructure:"id__gte,omitempty"`
+	// IdLt:
+	IdLt []int32 `json:"id__lt,omitempty" mapstructure:"id__lt,omitempty"`
+	// IdLte:
+	IdLte []int32 `json:"id__lte,omitempty" mapstructure:"id__lte,omitempty"`
+	// IdN:
+	IdN []int32 `json:"id__n,omitempty" mapstructure:"id__n,omitempty"`
+	// LastUpdated:
+	LastUpdated []time.Time `json:"last_updated,omitempty" mapstructure:"last_updated,omitempty"`
+	// LastUpdatedGt:
+	LastUpdatedGt []time.Time `json:"last_updated__gt,omitempty" mapstructure:"last_updated__gt,omitempty"`
+	// LastUpdatedGte:
+	LastUpdatedGte []time.Time `json:"last_updated__gte,omitempty" mapstructure:"last_updated__gte,omitempty"`
+	// LastUpdatedLt:
+	LastUpdatedLt []time.Time `json:"last_updated__lt,omitempty" mapstructure:"last_updated__lt,omitempty"`
+	// LastUpdatedLte:
+	LastUpdatedLte []time.Time `json:"last_updated__lte,omitempty" mapstructure:"last_updated__lte,omitempty"`
+	// LastUpdatedN:
+	LastUpdatedN []time.Time `json:"last_updated__n,omitempty" mapstructure:"last_updated__n,omitempty"`
+	// Limit: Number of results to return per page.
+	Limit int32 `json:"limit,omitempty" mapstructure:"limit,omitempty"`
+	// Offset: The initial index from which to return the results.
+	Offset int32 `json:"offset,omitempty" mapstructure:"offset,omitempty"`
+	// Ordering: Which field to use when ordering the results.
+	Ordering string `json:"ordering,omitempty" mapstructure:"ordering,omitempty"`
+	// Q: Search
+	Q string `json:"q,omitempty" mapstructure:"q,omitempty"`
+	// Ssid:
+	Ssid []string `json:"ssid,omitempty" mapstructure:"ssid,omitempty"`
+	// SsidEmpty:
+	SsidEmpty []string `json:"ssid__empty,omitempty" mapstructure:"ssid__empty,omitempty"`
+	// SsidIc:
+	SsidIc []string `json:"ssid__ic,omitempty" mapstructure:"ssid__ic,omitempty"`
+	// SsidIe:
+	SsidIe []string `json:"ssid__ie,omitempty" mapstructure:"ssid__ie,omitempty"`
+	// SsidIew:
+	SsidIew []string `json:"ssid__iew,omitempty" mapstructure:"ssid__iew,omitempty"`
+	// SsidIsw:
+	SsidIsw []string `json:"ssid__isw,omitempty" mapstructure:"ssid__isw,omitempty"`
+	// SsidN:
+	SsidN []string `json:"ssid__n,omitempty" mapstructure:"ssid__n,omitempty"`
+	// SsidNic:
+	SsidNic []string `json:"ssid__nic,omitempty" mapstructure:"ssid__nic,omitempty"`
+	// SsidNie:
+	SsidNie []string `json:"ssid__nie,omitempty" mapstructure:"ssid__nie,omitempty"`
+	// SsidNiew:
+	SsidNiew []string `json:"ssid__niew,omitempty" mapstructure:"ssid__niew,omitempty"`
+	// SsidNisw:
+	SsidNisw []string `json:"ssid__nisw,omitempty" mapstructure:"ssid__nisw,omitempty"`
+	// Status: * `active` - Active
+	// * `reserved` - Reserved
+	// * `disabled` - Disabled
+	// * `deprecated` - Deprecated
+	Status []string `json:"status,omitempty" mapstructure:"status,omitempty"`
+	// StatusN: * `active` - Active
+	// * `reserved` - Reserved
+	// * `disabled` - Disabled
+	// * `deprecated` - Deprecated
+	StatusN []string `json:"status__n,omitempty" mapstructure:"status__n,omitempty"`
+	// Tag:
+	Tag []string `json:"tag,omitempty" mapstructure:"tag,omitempty"`
+	// TagN:
+	TagN []string `json:"tag__n,omitempty" mapstructure:"tag__n,omitempty"`
+	// Tenant: Tenant (slug)
+	Tenant []string `json:"tenant,omitempty" mapstructure:"tenant,omitempty"`
+	// TenantN: Tenant (slug)
+	TenantN []string `json:"tenant__n,omitempty" mapstructure:"tenant__n,omitempty"`
+	// TenantGroup: Tenant Group (slug)
+	TenantGroup []int32 `json:"tenant_group,omitempty" mapstructure:"tenant_group,omitempty"`
+	// TenantGroupN: Tenant Group (slug)
+	TenantGroupN []int32 `json:"tenant_group__n,omitempty" mapstructure:"tenant_group__n,omitempty"`
+	// TenantGroupId: Tenant Group (ID)
+	TenantGroupId []int32 `json:"tenant_group_id,omitempty" mapstructure:"tenant_group_id,omitempty"`
+	// TenantGroupIdN: Tenant Group (ID)
+	TenantGroupIdN []int32 `json:"tenant_group_id__n,omitempty" mapstructure:"tenant_group_id__n,omitempty"`
+	// TenantId: Tenant (ID)
+	TenantId []*int32 `json:"tenant_id,omitempty" mapstructure:"tenant_id,omitempty"`
+	// TenantIdN: Tenant (ID)
+	TenantIdN []*int32 `json:"tenant_id__n,omitempty" mapstructure:"tenant_id__n,omitempty"`
+	// UpdatedByRequest:
+	UpdatedByRequest string `json:"updated_by_request,omitempty" mapstructure:"updated_by_request,omitempty"`
+	// VlanId:
+	VlanId []*int32 `json:"vlan_id,omitempty" mapstructure:"vlan_id,omitempty"`
+	// VlanIdN:
+	VlanIdN []*int32 `json:"vlan_id__n,omitempty" mapstructure:"vlan_id__n,omitempty"`
+}
+
+// Validate implements basic validation for this model
+func (m WirelessWirelessLansListQueryParameters) Validate() error {
+	return validation.Errors{
+		"authCipher": validation.Validate(
+			m.AuthCipher,
+		),
+		"authCipherN": validation.Validate(
+			m.AuthCipherN,
+		),
+		"authPsk": validation.Validate(
+			m.AuthPsk,
+		),
+		"authPskEmpty": validation.Validate(
+			m.AuthPskEmpty,
+		),
+		"authPskIc": validation.Validate(
+			m.AuthPskIc,
+		),
+		"authPskIe": validation.Validate(
+			m.AuthPskIe,
+		),
+		"authPskIew": validation.Validate(
+			m.AuthPskIew,
+		),
+		"authPskIsw": validation.Validate(
+			m.AuthPskIsw,
+		),
+		"authPskN": validation.Validate(
+			m.AuthPskN,
+		),
+		"authPskNic": validation.Validate(
+			m.AuthPskNic,
+		),
+		"authPskNie": validation.Validate(
+			m.AuthPskNie,
+		),
+		"authPskNiew": validation.Validate(
+			m.AuthPskNiew,
+		),
+		"authPskNisw": validation.Validate(
+			m.AuthPskNisw,
+		),
+		"authType": validation.Validate(
+			m.AuthType,
+		),
+		"authTypeN": validation.Validate(
+			m.AuthTypeN,
+		),
+		"created": validation.Validate(
+			m.Created,
+		),
+		"createdGt": validation.Validate(
+			m.CreatedGt,
+		),
+		"createdGte": validation.Validate(
+			m.CreatedGte,
+		),
+		"createdLt": validation.Validate(
+			m.CreatedLt,
+		),
+		"createdLte": validation.Validate(
+			m.CreatedLte,
+		),
+		"createdN": validation.Validate(
+			m.CreatedN,
+		),
+		"createdByRequest": validation.Validate(
+			m.CreatedByRequest, is.UUID,
+		),
+		"description": validation.Validate(
+			m.Description,
+		),
+		"descriptionEmpty": validation.Validate(
+			m.DescriptionEmpty,
+		),
+		"descriptionIc": validation.Validate(
+			m.DescriptionIc,
+		),
+		"descriptionIe": validation.Validate(
+			m.DescriptionIe,
+		),
+		"descriptionIew": validation.Validate(
+			m.DescriptionIew,
+		),
+		"descriptionIsw": validation.Validate(
+			m.DescriptionIsw,
+		),
+		"descriptionN": validation.Validate(
+			m.DescriptionN,
+		),
+		"descriptionNic": validation.Validate(
+			m.DescriptionNic,
+		),
+		"descriptionNie": validation.Validate(
+			m.DescriptionNie,
+		),
+		"descriptionNiew": validation.Validate(
+			m.DescriptionNiew,
+		),
+		"descriptionNisw": validation.Validate(
+			m.DescriptionNisw,
+		),
+		"group": validation.Validate(
+			m.Group,
+		),
+		"groupN": validation.Validate(
+			m.GroupN,
+		),
+		"groupId": validation.Validate(
+			m.GroupId,
+		),
+		"groupIdN": validation.Validate(
+			m.GroupIdN,
+		),
+		"id": validation.Validate(
+			m.Id,
+		),
+		"idGt": validation.Validate(
+			m.IdGt,
+		),
+		"idGte": validation.Validate(
+			m.IdGte,
+		),
+		"idLt": validation.Validate(
+			m.IdLt,
+		),
+		"idLte": validation.Validate(
+			m.IdLte,
+		),
+		"idN": validation.Validate(
+			m.IdN,
+		),
+		"lastUpdated": validation.Validate(
+			m.LastUpdated,
+		),
+		"lastUpdatedGt": validation.Validate(
+			m.LastUpdatedGt,
+		),
+		"lastUpdatedGte": validation.Validate(
+			m.LastUpdatedGte,
+		),
+		"lastUpdatedLt": validation.Validate(
+			m.LastUpdatedLt,
+		),
+		"lastUpdatedLte": validation.Validate(
+			m.LastUpdatedLte,
+		),
+		"lastUpdatedN": validation.Validate(
+			m.LastUpdatedN,
+		),
+		"ssid": validation.Validate(
+			m.Ssid,
+		),
+		"ssidEmpty": validation.Validate(
+			m.SsidEmpty,
+		),
+		"ssidIc": validation.Validate(
+			m.SsidIc,
+		),
+		"ssidIe": validation.Validate(
+			m.SsidIe,
+		),
+		"ssidIew": validation.Validate(
+			m.SsidIew,
+		),
+		"ssidIsw": validation.Validate(
+			m.SsidIsw,
+		),
+		"ssidN": validation.Validate(
+			m.SsidN,
+		),
+		"ssidNic": validation.Validate(
+			m.SsidNic,
+		),
+		"ssidNie": validation.Validate(
+			m.SsidNie,
+		),
+		"ssidNiew": validation.Validate(
+			m.SsidNiew,
+		),
+		"ssidNisw": validation.Validate(
+			m.SsidNisw,
+		),
+		"status": validation.Validate(
+			m.Status,
+		),
+		"statusN": validation.Validate(
+			m.StatusN,
+		),
+		"tag": validation.Validate(
+			m.Tag,
+		),
+		"tagN": validation.Validate(
+			m.TagN,
+		),
+		"tenant": validation.Validate(
+			m.Tenant,
+		),
+		"tenantN": validation.Validate(
+			m.TenantN,
+		),
+		"tenantGroup": validation.Validate(
+			m.TenantGroup,
+		),
+		"tenantGroupN": validation.Validate(
+			m.TenantGroupN,
+		),
+		"tenantGroupId": validation.Validate(
+			m.TenantGroupId,
+		),
+		"tenantGroupIdN": validation.Validate(
+			m.TenantGroupIdN,
+		),
+		"tenantId": validation.Validate(
+			m.TenantId,
+		),
+		"tenantIdN": validation.Validate(
+			m.TenantIdN,
+		),
+		"updatedByRequest": validation.Validate(
+			m.UpdatedByRequest, is.UUID,
+		),
+		"vlanId": validation.Validate(
+			m.VlanId,
+		),
+		"vlanIdN": validation.Validate(
+			m.VlanIdN,
+		),
+	}.Filter()
+}
+
+// GetAuthCipher returns the AuthCipher property
+func (m WirelessWirelessLansListQueryParameters) GetAuthCipher() []string {
+	return m.AuthCipher
+}
+
+// SetAuthCipher sets the AuthCipher property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthCipher(val []string) {
+	m.AuthCipher = val
+}
+
+// GetAuthCipherN returns the AuthCipherN property
+func (m WirelessWirelessLansListQueryParameters) GetAuthCipherN() []string {
+	return m.AuthCipherN
+}
+
+// SetAuthCipherN sets the AuthCipherN property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthCipherN(val []string) {
+	m.AuthCipherN = val
+}
+
+// GetAuthPsk returns the AuthPsk property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPsk() []string {
+	return m.AuthPsk
+}
+
+// SetAuthPsk sets the AuthPsk property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPsk(val []string) {
+	m.AuthPsk = val
+}
+
+// GetAuthPskEmpty returns the AuthPskEmpty property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskEmpty() []string {
+	return m.AuthPskEmpty
+}
+
+// SetAuthPskEmpty sets the AuthPskEmpty property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskEmpty(val []string) {
+	m.AuthPskEmpty = val
+}
+
+// GetAuthPskIc returns the AuthPskIc property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskIc() []string {
+	return m.AuthPskIc
+}
+
+// SetAuthPskIc sets the AuthPskIc property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskIc(val []string) {
+	m.AuthPskIc = val
+}
+
+// GetAuthPskIe returns the AuthPskIe property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskIe() []string {
+	return m.AuthPskIe
+}
+
+// SetAuthPskIe sets the AuthPskIe property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskIe(val []string) {
+	m.AuthPskIe = val
+}
+
+// GetAuthPskIew returns the AuthPskIew property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskIew() []string {
+	return m.AuthPskIew
+}
+
+// SetAuthPskIew sets the AuthPskIew property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskIew(val []string) {
+	m.AuthPskIew = val
+}
+
+// GetAuthPskIsw returns the AuthPskIsw property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskIsw() []string {
+	return m.AuthPskIsw
+}
+
+// SetAuthPskIsw sets the AuthPskIsw property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskIsw(val []string) {
+	m.AuthPskIsw = val
+}
+
+// GetAuthPskN returns the AuthPskN property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskN() []string {
+	return m.AuthPskN
+}
+
+// SetAuthPskN sets the AuthPskN property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskN(val []string) {
+	m.AuthPskN = val
+}
+
+// GetAuthPskNic returns the AuthPskNic property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskNic() []string {
+	return m.AuthPskNic
+}
+
+// SetAuthPskNic sets the AuthPskNic property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskNic(val []string) {
+	m.AuthPskNic = val
+}
+
+// GetAuthPskNie returns the AuthPskNie property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskNie() []string {
+	return m.AuthPskNie
+}
+
+// SetAuthPskNie sets the AuthPskNie property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskNie(val []string) {
+	m.AuthPskNie = val
+}
+
+// GetAuthPskNiew returns the AuthPskNiew property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskNiew() []string {
+	return m.AuthPskNiew
+}
+
+// SetAuthPskNiew sets the AuthPskNiew property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskNiew(val []string) {
+	m.AuthPskNiew = val
+}
+
+// GetAuthPskNisw returns the AuthPskNisw property
+func (m WirelessWirelessLansListQueryParameters) GetAuthPskNisw() []string {
+	return m.AuthPskNisw
+}
+
+// SetAuthPskNisw sets the AuthPskNisw property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthPskNisw(val []string) {
+	m.AuthPskNisw = val
+}
+
+// GetAuthType returns the AuthType property
+func (m WirelessWirelessLansListQueryParameters) GetAuthType() []string {
+	return m.AuthType
+}
+
+// SetAuthType sets the AuthType property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthType(val []string) {
+	m.AuthType = val
+}
+
+// GetAuthTypeN returns the AuthTypeN property
+func (m WirelessWirelessLansListQueryParameters) GetAuthTypeN() []string {
+	return m.AuthTypeN
+}
+
+// SetAuthTypeN sets the AuthTypeN property
+func (m *WirelessWirelessLansListQueryParameters) SetAuthTypeN(val []string) {
+	m.AuthTypeN = val
+}
+
+// GetCreated returns the Created property
+func (m WirelessWirelessLansListQueryParameters) GetCreated() []time.Time {
+	return m.Created
+}
+
+// SetCreated sets the Created property
+func (m *WirelessWirelessLansListQueryParameters) SetCreated(val []time.Time) {
+	m.Created = val
+}
+
+// GetCreatedGt returns the CreatedGt property
+func (m WirelessWirelessLansListQueryParameters) GetCreatedGt() []time.Time {
+	return m.CreatedGt
+}
+
+// SetCreatedGt sets the CreatedGt property
+func (m *WirelessWirelessLansListQueryParameters) SetCreatedGt(val []time.Time) {
+	m.CreatedGt = val
+}
+
+// GetCreatedGte returns the CreatedGte property
+func (m WirelessWirelessLansListQueryParameters) GetCreatedGte() []time.Time {
+	return m.CreatedGte
+}
+
+// SetCreatedGte sets the CreatedGte property
+func (m *WirelessWirelessLansListQueryParameters) SetCreatedGte(val []time.Time) {
+	m.CreatedGte = val
+}
+
+// GetCreatedLt returns the CreatedLt property
+func (m WirelessWirelessLansListQueryParameters) GetCreatedLt() []time.Time {
+	return m.CreatedLt
+}
+
+// SetCreatedLt sets the CreatedLt property
+func (m *WirelessWirelessLansListQueryParameters) SetCreatedLt(val []time.Time) {
+	m.CreatedLt = val
+}
+
+// GetCreatedLte returns the CreatedLte property
+func (m WirelessWirelessLansListQueryParameters) GetCreatedLte() []time.Time {
+	return m.CreatedLte
+}
+
+// SetCreatedLte sets the CreatedLte property
+func (m *WirelessWirelessLansListQueryParameters) SetCreatedLte(val []time.Time) {
+	m.CreatedLte = val
+}
+
+// GetCreatedN returns the CreatedN property
+func (m WirelessWirelessLansListQueryParameters) GetCreatedN() []time.Time {
+	return m.CreatedN
+}
+
+// SetCreatedN sets the CreatedN property
+func (m *WirelessWirelessLansListQueryParameters) SetCreatedN(val []time.Time) {
+	m.CreatedN = val
+}
+
+// GetCreatedByRequest returns the CreatedByRequest property
+func (m WirelessWirelessLansListQueryParameters) GetCreatedByRequest() string {
+	return m.CreatedByRequest
+}
+
+// SetCreatedByRequest sets the CreatedByRequest property
+func (m *WirelessWirelessLansListQueryParameters) SetCreatedByRequest(val string) {
+	m.CreatedByRequest = val
+}
+
+// GetDescription returns the Description property
+func (m WirelessWirelessLansListQueryParameters) GetDescription() []string {
+	return m.Description
+}
+
+// SetDescription sets the Description property
+func (m *WirelessWirelessLansListQueryParameters) SetDescription(val []string) {
+	m.Description = val
+}
+
+// GetDescriptionEmpty returns the DescriptionEmpty property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionEmpty() []string {
+	return m.DescriptionEmpty
+}
+
+// SetDescriptionEmpty sets the DescriptionEmpty property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionEmpty(val []string) {
+	m.DescriptionEmpty = val
+}
+
+// GetDescriptionIc returns the DescriptionIc property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionIc() []string {
+	return m.DescriptionIc
+}
+
+// SetDescriptionIc sets the DescriptionIc property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionIc(val []string) {
+	m.DescriptionIc = val
+}
+
+// GetDescriptionIe returns the DescriptionIe property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionIe() []string {
+	return m.DescriptionIe
+}
+
+// SetDescriptionIe sets the DescriptionIe property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionIe(val []string) {
+	m.DescriptionIe = val
+}
+
+// GetDescriptionIew returns the DescriptionIew property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionIew() []string {
+	return m.DescriptionIew
+}
+
+// SetDescriptionIew sets the DescriptionIew property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionIew(val []string) {
+	m.DescriptionIew = val
+}
+
+// GetDescriptionIsw returns the DescriptionIsw property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionIsw() []string {
+	return m.DescriptionIsw
+}
+
+// SetDescriptionIsw sets the DescriptionIsw property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionIsw(val []string) {
+	m.DescriptionIsw = val
+}
+
+// GetDescriptionN returns the DescriptionN property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionN() []string {
+	return m.DescriptionN
+}
+
+// SetDescriptionN sets the DescriptionN property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionN(val []string) {
+	m.DescriptionN = val
+}
+
+// GetDescriptionNic returns the DescriptionNic property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionNic() []string {
+	return m.DescriptionNic
+}
+
+// SetDescriptionNic sets the DescriptionNic property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionNic(val []string) {
+	m.DescriptionNic = val
+}
+
+// GetDescriptionNie returns the DescriptionNie property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionNie() []string {
+	return m.DescriptionNie
+}
+
+// SetDescriptionNie sets the DescriptionNie property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionNie(val []string) {
+	m.DescriptionNie = val
+}
+
+// GetDescriptionNiew returns the DescriptionNiew property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionNiew() []string {
+	return m.DescriptionNiew
+}
+
+// SetDescriptionNiew sets the DescriptionNiew property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionNiew(val []string) {
+	m.DescriptionNiew = val
+}
+
+// GetDescriptionNisw returns the DescriptionNisw property
+func (m WirelessWirelessLansListQueryParameters) GetDescriptionNisw() []string {
+	return m.DescriptionNisw
+}
+
+// SetDescriptionNisw sets the DescriptionNisw property
+func (m *WirelessWirelessLansListQueryParameters) SetDescriptionNisw(val []string) {
+	m.DescriptionNisw = val
+}
+
+// GetGroup returns the Group property
+func (m WirelessWirelessLansListQueryParameters) GetGroup() []int32 {
+	return m.Group
+}
+
+// SetGroup sets the Group property
+func (m *WirelessWirelessLansListQueryParameters) SetGroup(val []int32) {
+	m.Group = val
+}
+
+// GetGroupN returns the GroupN property
+func (m WirelessWirelessLansListQueryParameters) GetGroupN() []int32 {
+	return m.GroupN
+}
+
+// SetGroupN sets the GroupN property
+func (m *WirelessWirelessLansListQueryParameters) SetGroupN(val []int32) {
+	m.GroupN = val
+}
+
+// GetGroupId returns the GroupId property
+func (m WirelessWirelessLansListQueryParameters) GetGroupId() []int32 {
+	return m.GroupId
+}
+
+// SetGroupId sets the GroupId property
+func (m *WirelessWirelessLansListQueryParameters) SetGroupId(val []int32) {
+	m.GroupId = val
+}
+
+// GetGroupIdN returns the GroupIdN property
+func (m WirelessWirelessLansListQueryParameters) GetGroupIdN() []int32 {
+	return m.GroupIdN
+}
+
+// SetGroupIdN sets the GroupIdN property
+func (m *WirelessWirelessLansListQueryParameters) SetGroupIdN(val []int32) {
+	m.GroupIdN = val
+}
+
+// GetId returns the Id property
+func (m WirelessWirelessLansListQueryParameters) GetId() []int32 {
+	return m.Id
+}
+
+// SetId sets the Id property
+func (m *WirelessWirelessLansListQueryParameters) SetId(val []int32) {
+	m.Id = val
+}
+
+// GetIdGt returns the IdGt property
+func (m WirelessWirelessLansListQueryParameters) GetIdGt() []int32 {
+	return m.IdGt
+}
+
+// SetIdGt sets the IdGt property
+func (m *WirelessWirelessLansListQueryParameters) SetIdGt(val []int32) {
+	m.IdGt = val
+}
+
+// GetIdGte returns the IdGte property
+func (m WirelessWirelessLansListQueryParameters) GetIdGte() []int32 {
+	return m.IdGte
+}
+
+// SetIdGte sets the IdGte property
+func (m *WirelessWirelessLansListQueryParameters) SetIdGte(val []int32) {
+	m.IdGte = val
+}
+
+// GetIdLt returns the IdLt property
+func (m WirelessWirelessLansListQueryParameters) GetIdLt() []int32 {
+	return m.IdLt
+}
+
+// SetIdLt sets the IdLt property
+func (m *WirelessWirelessLansListQueryParameters) SetIdLt(val []int32) {
+	m.IdLt = val
+}
+
+// GetIdLte returns the IdLte property
+func (m WirelessWirelessLansListQueryParameters) GetIdLte() []int32 {
+	return m.IdLte
+}
+
+// SetIdLte sets the IdLte property
+func (m *WirelessWirelessLansListQueryParameters) SetIdLte(val []int32) {
+	m.IdLte = val
+}
+
+// GetIdN returns the IdN property
+func (m WirelessWirelessLansListQueryParameters) GetIdN() []int32 {
+	return m.IdN
+}
+
+// SetIdN sets the IdN property
+func (m *WirelessWirelessLansListQueryParameters) SetIdN(val []int32) {
+	m.IdN = val
+}
+
+// GetLastUpdated returns the LastUpdated property
+func (m WirelessWirelessLansListQueryParameters) GetLastUpdated() []time.Time {
+	return m.LastUpdated
+}
+
+// SetLastUpdated sets the LastUpdated property
+func (m *WirelessWirelessLansListQueryParameters) SetLastUpdated(val []time.Time) {
+	m.LastUpdated = val
+}
+
+// GetLastUpdatedGt returns the LastUpdatedGt property
+func (m WirelessWirelessLansListQueryParameters) GetLastUpdatedGt() []time.Time {
+	return m.LastUpdatedGt
+}
+
+// SetLastUpdatedGt sets the LastUpdatedGt property
+func (m *WirelessWirelessLansListQueryParameters) SetLastUpdatedGt(val []time.Time) {
+	m.LastUpdatedGt = val
+}
+
+// GetLastUpdatedGte returns the LastUpdatedGte property
+func (m WirelessWirelessLansListQueryParameters) GetLastUpdatedGte() []time.Time {
+	return m.LastUpdatedGte
+}
+
+// SetLastUpdatedGte sets the LastUpdatedGte property
+func (m *WirelessWirelessLansListQueryParameters) SetLastUpdatedGte(val []time.Time) {
+	m.LastUpdatedGte = val
+}
+
+// GetLastUpdatedLt returns the LastUpdatedLt property
+func (m WirelessWirelessLansListQueryParameters) GetLastUpdatedLt() []time.Time {
+	return m.LastUpdatedLt
+}
+
+// SetLastUpdatedLt sets the LastUpdatedLt property
+func (m *WirelessWirelessLansListQueryParameters) SetLastUpdatedLt(val []time.Time) {
+	m.LastUpdatedLt = val
+}
+
+// GetLastUpdatedLte returns the LastUpdatedLte property
+func (m WirelessWirelessLansListQueryParameters) GetLastUpdatedLte() []time.Time {
+	return m.LastUpdatedLte
+}
+
+// SetLastUpdatedLte sets the LastUpdatedLte property
+func (m *WirelessWirelessLansListQueryParameters) SetLastUpdatedLte(val []time.Time) {
+	m.LastUpdatedLte = val
+}
+
+// GetLastUpdatedN returns the LastUpdatedN property
+func (m WirelessWirelessLansListQueryParameters) GetLastUpdatedN() []time.Time {
+	return m.LastUpdatedN
+}
+
+// SetLastUpdatedN sets the LastUpdatedN property
+func (m *WirelessWirelessLansListQueryParameters) SetLastUpdatedN(val []time.Time) {
+	m.LastUpdatedN = val
+}
+
+// GetLimit returns the Limit property
+func (m WirelessWirelessLansListQueryParameters) GetLimit() int32 {
+	return m.Limit
+}
+
+// SetLimit sets the Limit property
+func (m *WirelessWirelessLansListQueryParameters) SetLimit(val int32) {
+	m.Limit = val
+}
+
+// GetOffset returns the Offset property
+func (m WirelessWirelessLansListQueryParameters) GetOffset() int32 {
+	return m.Offset
+}
+
+// SetOffset sets the Offset property
+func (m *WirelessWirelessLansListQueryParameters) SetOffset(val int32) {
+	m.Offset = val
+}
+
+// GetOrdering returns the Ordering property
+func (m WirelessWirelessLansListQueryParameters) GetOrdering() string {
+	return m.Ordering
+}
+
+// SetOrdering sets the Ordering property
+func (m *WirelessWirelessLansListQueryParameters) SetOrdering(val string) {
+	m.Ordering = val
+}
+
+// GetQ returns the Q property
+func (m WirelessWirelessLansListQueryParameters) GetQ() string {
+	return m.Q
+}
+
+// SetQ sets the Q property
+func (m *WirelessWirelessLansListQueryParameters) SetQ(val string) {
+	m.Q = val
+}
+
+// GetSsid returns the Ssid property
+func (m WirelessWirelessLansListQueryParameters) GetSsid() []string {
+	return m.Ssid
+}
+
+// SetSsid sets the Ssid property
+func (m *WirelessWirelessLansListQueryParameters) SetSsid(val []string) {
+	m.Ssid = val
+}
+
+// GetSsidEmpty returns the SsidEmpty property
+func (m WirelessWirelessLansListQueryParameters) GetSsidEmpty() []string {
+	return m.SsidEmpty
+}
+
+// SetSsidEmpty sets the SsidEmpty property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidEmpty(val []string) {
+	m.SsidEmpty = val
+}
+
+// GetSsidIc returns the SsidIc property
+func (m WirelessWirelessLansListQueryParameters) GetSsidIc() []string {
+	return m.SsidIc
+}
+
+// SetSsidIc sets the SsidIc property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidIc(val []string) {
+	m.SsidIc = val
+}
+
+// GetSsidIe returns the SsidIe property
+func (m WirelessWirelessLansListQueryParameters) GetSsidIe() []string {
+	return m.SsidIe
+}
+
+// SetSsidIe sets the SsidIe property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidIe(val []string) {
+	m.SsidIe = val
+}
+
+// GetSsidIew returns the SsidIew property
+func (m WirelessWirelessLansListQueryParameters) GetSsidIew() []string {
+	return m.SsidIew
+}
+
+// SetSsidIew sets the SsidIew property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidIew(val []string) {
+	m.SsidIew = val
+}
+
+// GetSsidIsw returns the SsidIsw property
+func (m WirelessWirelessLansListQueryParameters) GetSsidIsw() []string {
+	return m.SsidIsw
+}
+
+// SetSsidIsw sets the SsidIsw property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidIsw(val []string) {
+	m.SsidIsw = val
+}
+
+// GetSsidN returns the SsidN property
+func (m WirelessWirelessLansListQueryParameters) GetSsidN() []string {
+	return m.SsidN
+}
+
+// SetSsidN sets the SsidN property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidN(val []string) {
+	m.SsidN = val
+}
+
+// GetSsidNic returns the SsidNic property
+func (m WirelessWirelessLansListQueryParameters) GetSsidNic() []string {
+	return m.SsidNic
+}
+
+// SetSsidNic sets the SsidNic property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidNic(val []string) {
+	m.SsidNic = val
+}
+
+// GetSsidNie returns the SsidNie property
+func (m WirelessWirelessLansListQueryParameters) GetSsidNie() []string {
+	return m.SsidNie
+}
+
+// SetSsidNie sets the SsidNie property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidNie(val []string) {
+	m.SsidNie = val
+}
+
+// GetSsidNiew returns the SsidNiew property
+func (m WirelessWirelessLansListQueryParameters) GetSsidNiew() []string {
+	return m.SsidNiew
+}
+
+// SetSsidNiew sets the SsidNiew property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidNiew(val []string) {
+	m.SsidNiew = val
+}
+
+// GetSsidNisw returns the SsidNisw property
+func (m WirelessWirelessLansListQueryParameters) GetSsidNisw() []string {
+	return m.SsidNisw
+}
+
+// SetSsidNisw sets the SsidNisw property
+func (m *WirelessWirelessLansListQueryParameters) SetSsidNisw(val []string) {
+	m.SsidNisw = val
+}
+
+// GetStatus returns the Status property
+func (m WirelessWirelessLansListQueryParameters) GetStatus() []string {
+	return m.Status
+}
+
+// SetStatus sets the Status property
+func (m *WirelessWirelessLansListQueryParameters) SetStatus(val []string) {
+	m.Status = val
+}
+
+// GetStatusN returns the StatusN property
+func (m WirelessWirelessLansListQueryParameters) GetStatusN() []string {
+	return m.StatusN
+}
+
+// SetStatusN sets the StatusN property
+func (m *WirelessWirelessLansListQueryParameters) SetStatusN(val []string) {
+	m.StatusN = val
+}
+
+// GetTag returns the Tag property
+func (m WirelessWirelessLansListQueryParameters) GetTag() []string {
+	return m.Tag
+}
+
+// SetTag sets the Tag property
+func (m *WirelessWirelessLansListQueryParameters) SetTag(val []string) {
+	m.Tag = val
+}
+
+// GetTagN returns the TagN property
+func (m WirelessWirelessLansListQueryParameters) GetTagN() []string {
+	return m.TagN
+}
+
+// SetTagN sets the TagN property
+func (m *WirelessWirelessLansListQueryParameters) SetTagN(val []string) {
+	m.TagN = val
+}
+
+// GetTenant returns the Tenant property
+func (m WirelessWirelessLansListQueryParameters) GetTenant() []string {
+	return m.Tenant
+}
+
+// SetTenant sets the Tenant property
+func (m *WirelessWirelessLansListQueryParameters) SetTenant(val []string) {
+	m.Tenant = val
+}
+
+// GetTenantN returns the TenantN property
+func (m WirelessWirelessLansListQueryParameters) GetTenantN() []string {
+	return m.TenantN
+}
+
+// SetTenantN sets the TenantN property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantN(val []string) {
+	m.TenantN = val
+}
+
+// GetTenantGroup returns the TenantGroup property
+func (m WirelessWirelessLansListQueryParameters) GetTenantGroup() []int32 {
+	return m.TenantGroup
+}
+
+// SetTenantGroup sets the TenantGroup property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantGroup(val []int32) {
+	m.TenantGroup = val
+}
+
+// GetTenantGroupN returns the TenantGroupN property
+func (m WirelessWirelessLansListQueryParameters) GetTenantGroupN() []int32 {
+	return m.TenantGroupN
+}
+
+// SetTenantGroupN sets the TenantGroupN property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantGroupN(val []int32) {
+	m.TenantGroupN = val
+}
+
+// GetTenantGroupId returns the TenantGroupId property
+func (m WirelessWirelessLansListQueryParameters) GetTenantGroupId() []int32 {
+	return m.TenantGroupId
+}
+
+// SetTenantGroupId sets the TenantGroupId property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantGroupId(val []int32) {
+	m.TenantGroupId = val
+}
+
+// GetTenantGroupIdN returns the TenantGroupIdN property
+func (m WirelessWirelessLansListQueryParameters) GetTenantGroupIdN() []int32 {
+	return m.TenantGroupIdN
+}
+
+// SetTenantGroupIdN sets the TenantGroupIdN property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantGroupIdN(val []int32) {
+	m.TenantGroupIdN = val
+}
+
+// GetTenantId returns the TenantId property
+func (m WirelessWirelessLansListQueryParameters) GetTenantId() []*int32 {
+	return m.TenantId
+}
+
+// SetTenantId sets the TenantId property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantId(val []*int32) {
+	m.TenantId = val
+}
+
+// GetTenantIdN returns the TenantIdN property
+func (m WirelessWirelessLansListQueryParameters) GetTenantIdN() []*int32 {
+	return m.TenantIdN
+}
+
+// SetTenantIdN sets the TenantIdN property
+func (m *WirelessWirelessLansListQueryParameters) SetTenantIdN(val []*int32) {
+	m.TenantIdN = val
+}
+
+// GetUpdatedByRequest returns the UpdatedByRequest property
+func (m WirelessWirelessLansListQueryParameters) GetUpdatedByRequest() string {
+	return m.UpdatedByRequest
+}
+
+// SetUpdatedByRequest sets the UpdatedByRequest property
+func (m *WirelessWirelessLansListQueryParameters) SetUpdatedByRequest(val string) {
+	m.UpdatedByRequest = val
+}
+
+// GetVlanId returns the VlanId property
+func (m WirelessWirelessLansListQueryParameters) GetVlanId() []*int32 {
+	return m.VlanId
+}
+
+// SetVlanId sets the VlanId property
+func (m *WirelessWirelessLansListQueryParameters) SetVlanId(val []*int32) {
+	m.VlanId = val
+}
+
+// GetVlanIdN returns the VlanIdN property
+func (m WirelessWirelessLansListQueryParameters) GetVlanIdN() []*int32 {
+	return m.VlanIdN
+}
+
+// SetVlanIdN sets the VlanIdN property
+func (m *WirelessWirelessLansListQueryParameters) SetVlanIdN(val []*int32) {
+	m.VlanIdN = val
+}
